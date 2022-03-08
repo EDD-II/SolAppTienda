@@ -23,7 +23,11 @@ namespace AppTienda
         {
             int r;
             elec.ElecSerial = int.Parse(txtElectroSerial.Text);
-            //elec.TienNit = int.Parse()
+            elec.TienNit = int.Parse(txtElectroTiendNit.Text);
+            //elec.ElectTipo = ;
+            elec.ElectAnioFabricacion = txtElectroFechaFabricacion.Text;
+            elec.ElectMarca = txtElectroMarca.Text;
+            elec.ElectPaisOrigen = txtElectroPaisOrigen.Text;
         }
 
         private void btnTiendaGuardar_Click(object sender, EventArgs e)
