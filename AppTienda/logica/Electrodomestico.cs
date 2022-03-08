@@ -17,7 +17,10 @@ namespace AppTienda.logica
         private string elecMarca;
         private string elecPaisOrigen;
         private Datos dt = new Datos();
+        public Electrodomestico()
+        {
 
+        }
         public Electrodomestico(int elecSerial, int tienNit, string electTipo, string electAnioFabricacion, string electMarca, string electPaisOrigen)
         {
             this.ElecSerial = elecSerial;
