@@ -98,8 +98,10 @@ namespace AppTienda
             this.btnTiendaGuardar.Location = new System.Drawing.Point(426, 257);
             this.btnTiendaGuardar.Name = "btnTiendaGuardar";
             this.btnTiendaGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnTiendaGuardar.TabIndex = 0;
+            this.btnTiendaGuardar.TabIndex = 1;
             this.btnTiendaGuardar.Text = "Guardar";
+            this.btnTiendaGuardar.UseVisualStyleBackColor = true;
+            this.btnTiendaGuardar.Click += new System.EventHandler(this.btnTiendaGuardar_Click);
             // 
             // txtTiendaFechaCreacion
             // 
@@ -177,8 +179,10 @@ namespace AppTienda
             this.btnElectroGuardar.Location = new System.Drawing.Point(354, 255);
             this.btnElectroGuardar.Name = "btnElectroGuardar";
             this.btnElectroGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnElectroGuardar.TabIndex = 0;
+            this.btnElectroGuardar.TabIndex = 2;
             this.btnElectroGuardar.Text = "Guardar";
+            this.btnElectroGuardar.UseVisualStyleBackColor = true;
+            this.btnElectroGuardar.Click += new System.EventHandler(this.btnElectroGuardar_Click);
             // 
             // cmbTipoElectrodomestico
             // 
