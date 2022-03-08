@@ -93,6 +93,62 @@ namespace AppTienda
             this.tbpinsertarTienda.Text = "Registrar Tienda";
             this.tbpinsertarTienda.UseVisualStyleBackColor = true;
             // 
+            // btnTiendaGuardar
+            // 
+            this.btnTiendaGuardar.Location = new System.Drawing.Point(426, 257);
+            this.btnTiendaGuardar.Name = "btnTiendaGuardar";
+            this.btnTiendaGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnTiendaGuardar.TabIndex = 0;
+            this.btnTiendaGuardar.Text = "Guardar";
+            // 
+            // txtTiendaFechaCreacion
+            // 
+            this.txtTiendaFechaCreacion.Location = new System.Drawing.Point(157, 169);
+            this.txtTiendaFechaCreacion.Name = "txtTiendaFechaCreacion";
+            this.txtTiendaFechaCreacion.Size = new System.Drawing.Size(100, 20);
+            this.txtTiendaFechaCreacion.TabIndex = 1;
+            // 
+            // txtTiendaNombre
+            // 
+            this.txtTiendaNombre.Location = new System.Drawing.Point(157, 116);
+            this.txtTiendaNombre.Name = "txtTiendaNombre";
+            this.txtTiendaNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtTiendaNombre.TabIndex = 2;
+            // 
+            // txtTiendaNit
+            // 
+            this.txtTiendaNit.Location = new System.Drawing.Point(157, 62);
+            this.txtTiendaNit.Name = "txtTiendaNit";
+            this.txtTiendaNit.Size = new System.Drawing.Size(100, 20);
+            this.txtTiendaNit.TabIndex = 3;
+            // 
+            // lbFechaCreacion
+            // 
+            this.lbFechaCreacion.AutoSize = true;
+            this.lbFechaCreacion.Location = new System.Drawing.Point(44, 172);
+            this.lbFechaCreacion.Name = "lbFechaCreacion";
+            this.lbFechaCreacion.Size = new System.Drawing.Size(97, 13);
+            this.lbFechaCreacion.TabIndex = 4;
+            this.lbFechaCreacion.Text = "Fecha de Creación";
+            // 
+            // lbNombreTienda
+            // 
+            this.lbNombreTienda.AutoSize = true;
+            this.lbNombreTienda.Location = new System.Drawing.Point(44, 119);
+            this.lbNombreTienda.Name = "lbNombreTienda";
+            this.lbNombreTienda.Size = new System.Drawing.Size(44, 13);
+            this.lbNombreTienda.TabIndex = 1;
+            this.lbNombreTienda.Text = "Nombre";
+            // 
+            // lbNit
+            // 
+            this.lbNit.AutoSize = true;
+            this.lbNit.Location = new System.Drawing.Point(44, 65);
+            this.lbNit.Name = "lbNit";
+            this.lbNit.Size = new System.Drawing.Size(25, 13);
+            this.lbNit.TabIndex = 5;
+            this.lbNit.Text = "NIT";
+            // 
             // tbpinsertarElectrodomestico
             // 
             this.tbpinsertarElectrodomestico.Controls.Add(this.btnElectroGuardar);
@@ -118,17 +174,11 @@ namespace AppTienda
             // 
             // btnElectroGuardar
             // 
-            this.tbpconsultarElectrodomesticos.Controls.Add(this.btnConsultar);
-            this.tbpconsultarElectrodomesticos.Controls.Add(this.txtConsultaNit);
-            this.tbpconsultarElectrodomesticos.Controls.Add(this.lbConsultaNit);
-            this.tbpconsultarElectrodomesticos.Controls.Add(this.dgConsulta);
-            this.tbpconsultarElectrodomesticos.Location = new System.Drawing.Point(4, 22);
-            this.tbpconsultarElectrodomesticos.Name = "tbpconsultarElectrodomesticos";
-            this.tbpconsultarElectrodomesticos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpconsultarElectrodomesticos.Size = new System.Drawing.Size(722, 320);
-            this.tbpconsultarElectrodomesticos.TabIndex = 2;
-            this.tbpconsultarElectrodomesticos.Text = "Consultar Electrodomésticos";
-            this.tbpconsultarElectrodomesticos.UseVisualStyleBackColor = true;
+            this.btnElectroGuardar.Location = new System.Drawing.Point(354, 255);
+            this.btnElectroGuardar.Name = "btnElectroGuardar";
+            this.btnElectroGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnElectroGuardar.TabIndex = 0;
+            this.btnElectroGuardar.Text = "Guardar";
             // 
             // cmbTipoElectrodomestico
             // 
@@ -142,14 +192,12 @@ namespace AppTienda
             this.cmbTipoElectrodomestico.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoElectrodomestico.TabIndex = 12;
             // 
-            // lbNombreTienda
+            // txtElectroTiendNit
             // 
-            this.lbNombreTienda.AutoSize = true;
-            this.lbNombreTienda.Location = new System.Drawing.Point(42, 110);
-            this.lbNombreTienda.Name = "lbNombreTienda";
-            this.lbNombreTienda.Size = new System.Drawing.Size(44, 13);
-            this.lbNombreTienda.TabIndex = 1;
-            this.lbNombreTienda.Text = "Nombre";
+            this.txtElectroTiendNit.Location = new System.Drawing.Point(202, 217);
+            this.txtElectroTiendNit.Name = "txtElectroTiendNit";
+            this.txtElectroTiendNit.Size = new System.Drawing.Size(121, 20);
+            this.txtElectroTiendNit.TabIndex = 13;
             // 
             // txtElectroPaisOrigen
             // 

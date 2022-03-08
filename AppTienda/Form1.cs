@@ -52,5 +52,15 @@ namespace AppTienda
             else
                 MessageBox.Show("Tienda no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTiendaNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
