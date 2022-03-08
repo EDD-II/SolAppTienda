@@ -16,5 +16,10 @@ namespace AppTienda
         {
             InitializeComponent();
         }
+
+        private void btnTiendaGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
