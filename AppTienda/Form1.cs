@@ -24,10 +24,17 @@ namespace AppTienda
             int r;
             elec.ElecSerial = int.Parse(txtElectroSerial.Text);
             elec.TienNit = int.Parse(txtElectroTiendNit.Text);
-            //elec.ElectTipo = ;
+            elec.ElectTipo = cmbTipoElectrodomestico.SelectedItem.ToString();
             elec.ElectAnioFabricacion = txtElectroFechaFabricacion.Text;
             elec.ElectMarca = txtElectroMarca.Text;
             elec.ElectPaisOrigen = txtElectroPaisOrigen.Text;
+            r = elec.insertarElectrodomestico();
+            if (r>0)
+            {
+                MessageBox.Show("Electrodomestico registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else
+                MessageBox.Show("Electrodomestico no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnTiendaGuardar_Click(object sender, EventArgs e)
