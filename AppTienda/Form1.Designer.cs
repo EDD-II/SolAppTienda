@@ -29,6 +29,7 @@ namespace AppTienda
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbcGestion = new System.Windows.Forms.TabControl();
             this.tbpinsertarTienda = new System.Windows.Forms.TabPage();
             this.btnTiendaGuardar = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@ namespace AppTienda
             this.tbpinsertarElectrodomestico = new System.Windows.Forms.TabPage();
             this.btnElectroGuardar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtElectroTiendNit = new System.Windows.Forms.TextBox();
             this.txtElectroPaisOrigen = new System.Windows.Forms.TextBox();
             this.txtElectroMarca = new System.Windows.Forms.TextBox();
             this.txtElectroFechaFabricacion = new System.Windows.Forms.TextBox();
@@ -92,68 +93,11 @@ namespace AppTienda
             this.tbpinsertarTienda.Text = "Registrar Tienda";
             this.tbpinsertarTienda.UseVisualStyleBackColor = true;
             // 
-            // btnTiendaGuardar
-            // 
-            this.btnTiendaGuardar.Location = new System.Drawing.Point(374, 241);
-            this.btnTiendaGuardar.Name = "btnTiendaGuardar";
-            this.btnTiendaGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnTiendaGuardar.TabIndex = 14;
-            this.btnTiendaGuardar.Text = "Guardar";
-            this.btnTiendaGuardar.UseVisualStyleBackColor = true;
-            // 
-            // txtTiendaFechaCreacion
-            // 
-            this.txtTiendaFechaCreacion.Location = new System.Drawing.Point(162, 152);
-            this.txtTiendaFechaCreacion.Name = "txtTiendaFechaCreacion";
-            this.txtTiendaFechaCreacion.Size = new System.Drawing.Size(100, 20);
-            this.txtTiendaFechaCreacion.TabIndex = 5;
-            // 
-            // txtTiendaNombre
-            // 
-            this.txtTiendaNombre.Location = new System.Drawing.Point(162, 102);
-            this.txtTiendaNombre.Name = "txtTiendaNombre";
-            this.txtTiendaNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtTiendaNombre.TabIndex = 4;
-            // 
-            // txtTiendaNit
-            // 
-            this.txtTiendaNit.Location = new System.Drawing.Point(162, 52);
-            this.txtTiendaNit.Name = "txtTiendaNit";
-            this.txtTiendaNit.Size = new System.Drawing.Size(100, 20);
-            this.txtTiendaNit.TabIndex = 3;
-            // 
-            // lbFechaCreacion
-            // 
-            this.lbFechaCreacion.AutoSize = true;
-            this.lbFechaCreacion.Location = new System.Drawing.Point(42, 160);
-            this.lbFechaCreacion.Name = "lbFechaCreacion";
-            this.lbFechaCreacion.Size = new System.Drawing.Size(100, 13);
-            this.lbFechaCreacion.TabIndex = 2;
-            this.lbFechaCreacion.Text = "Fecha de Creación ";
-            // 
-            // lbNombreTienda
-            // 
-            this.lbNombreTienda.AutoSize = true;
-            this.lbNombreTienda.Location = new System.Drawing.Point(42, 110);
-            this.lbNombreTienda.Name = "lbNombreTienda";
-            this.lbNombreTienda.Size = new System.Drawing.Size(44, 13);
-            this.lbNombreTienda.TabIndex = 1;
-            this.lbNombreTienda.Text = "Nombre";
-            // 
-            // lbNit
-            // 
-            this.lbNit.AutoSize = true;
-            this.lbNit.Location = new System.Drawing.Point(42, 60);
-            this.lbNit.Name = "lbNit";
-            this.lbNit.Size = new System.Drawing.Size(25, 13);
-            this.lbNit.TabIndex = 0;
-            this.lbNit.Text = "NIT";
-            // 
             // tbpinsertarElectrodomestico
             // 
             this.tbpinsertarElectrodomestico.Controls.Add(this.btnElectroGuardar);
             this.tbpinsertarElectrodomestico.Controls.Add(this.comboBox1);
-            this.tbpinsertarElectrodomestico.Controls.Add(this.textBox6);
+            this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroTiendNit);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroPaisOrigen);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroMarca);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroFechaFabricacion);
@@ -174,13 +118,17 @@ namespace AppTienda
             // 
             // btnElectroGuardar
             // 
-            this.btnElectroGuardar.Location = new System.Drawing.Point(374, 241);
-            this.btnElectroGuardar.Name = "btnElectroGuardar";
-            this.btnElectroGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnElectroGuardar.TabIndex = 13;
-            this.btnElectroGuardar.Text = "Guardar";
-            this.btnElectroGuardar.UseVisualStyleBackColor = true;
-            this.btnElectroGuardar.Click += new System.EventHandler(this.btnElectroGuardar_Click);
+            this.tbpconsultarElectrodomesticos.Controls.Add(this.btnConsultar);
+            this.tbpconsultarElectrodomesticos.Controls.Add(this.txtConsultaNit);
+            this.tbpconsultarElectrodomesticos.Controls.Add(this.lbConsultaNit);
+            this.tbpconsultarElectrodomesticos.Controls.Add(this.dgConsulta);
+            this.tbpconsultarElectrodomesticos.Location = new System.Drawing.Point(4, 22);
+            this.tbpconsultarElectrodomesticos.Name = "tbpconsultarElectrodomesticos";
+            this.tbpconsultarElectrodomesticos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpconsultarElectrodomesticos.Size = new System.Drawing.Size(722, 320);
+            this.tbpconsultarElectrodomesticos.TabIndex = 2;
+            this.tbpconsultarElectrodomesticos.Text = "Consultar Electrodomésticos";
+            this.tbpconsultarElectrodomesticos.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -194,12 +142,14 @@ namespace AppTienda
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 12;
             // 
-            // textBox6
+            // lbNombreTienda
             // 
-            this.textBox6.Location = new System.Drawing.Point(202, 212);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 11;
+            this.lbNombreTienda.AutoSize = true;
+            this.lbNombreTienda.Location = new System.Drawing.Point(42, 110);
+            this.lbNombreTienda.Name = "lbNombreTienda";
+            this.lbNombreTienda.Size = new System.Drawing.Size(44, 13);
+            this.lbNombreTienda.TabIndex = 1;
+            this.lbNombreTienda.Text = "Nombre";
             // 
             // txtElectroPaisOrigen
             // 
@@ -336,6 +286,7 @@ namespace AppTienda
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbcGestion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Tienda de Electrodomésticos";
             this.tbcGestion.ResumeLayout(false);
@@ -362,7 +313,7 @@ namespace AppTienda
         private System.Windows.Forms.Label lbFechaCreacion;
         private System.Windows.Forms.Label lbNombreTienda;
         private System.Windows.Forms.Label lbNit;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtElectroTiendNit;
         private System.Windows.Forms.TextBox txtElectroPaisOrigen;
         private System.Windows.Forms.TextBox txtElectroMarca;
         private System.Windows.Forms.TextBox txtElectroFechaFabricacion;

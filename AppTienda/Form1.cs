@@ -25,5 +25,10 @@ namespace AppTienda
             elec.ElecSerial = int.Parse(txtElectroSerial.Text);
             //elec.TienNit = int.Parse()
         }
+
+        private void btnTiendaGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
