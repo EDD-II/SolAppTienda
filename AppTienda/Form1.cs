@@ -57,8 +57,15 @@ namespace AppTienda
         {
             DataSet ds = new DataSet();
             ds = elec.consultarElectrodomestico(int.Parse(txtElectroTiendNit.Text));
-            dgConsulta.DataSource = ds;
-            dgConsulta.DataMember = "ResultadoDatos";
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                dgConsulta.DataSource = ds;
+                dgConsulta.DataMember = "ResultadoDatos";
+            }
+            else
+            {
+                MessageBox.Show("El electrodoméstico no se encuentra registrado", "Mensaje", MessageBoxButtons.OK);
+            }
         }
     }
 }
