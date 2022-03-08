@@ -41,7 +41,7 @@ namespace AppTienda
             this.lbNit = new System.Windows.Forms.Label();
             this.tbpinsertarElectrodomestico = new System.Windows.Forms.TabPage();
             this.btnElectroGuardar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoElectrodomestico = new System.Windows.Forms.ComboBox();
             this.txtElectroTiendNit = new System.Windows.Forms.TextBox();
             this.txtElectroPaisOrigen = new System.Windows.Forms.TextBox();
             this.txtElectroMarca = new System.Windows.Forms.TextBox();
@@ -96,7 +96,7 @@ namespace AppTienda
             // tbpinsertarElectrodomestico
             // 
             this.tbpinsertarElectrodomestico.Controls.Add(this.btnElectroGuardar);
-            this.tbpinsertarElectrodomestico.Controls.Add(this.comboBox1);
+            this.tbpinsertarElectrodomestico.Controls.Add(this.cmbTipoElectrodomestico);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroTiendNit);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroPaisOrigen);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroMarca);
@@ -130,17 +130,17 @@ namespace AppTienda
             this.tbpconsultarElectrodomesticos.Text = "Consultar Electrodomésticos";
             this.tbpconsultarElectrodomesticos.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbTipoElectrodomestico
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTipoElectrodomestico.FormattingEnabled = true;
+            this.cmbTipoElectrodomestico.Items.AddRange(new object[] {
             "televisor",
             "lavadora",
             "nevera"});
-            this.comboBox1.Location = new System.Drawing.Point(202, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cmbTipoElectrodomestico.Location = new System.Drawing.Point(202, 73);
+            this.cmbTipoElectrodomestico.Name = "cmbTipoElectrodomestico";
+            this.cmbTipoElectrodomestico.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoElectrodomestico.TabIndex = 12;
             // 
             // lbNombreTienda
             // 
@@ -325,7 +325,7 @@ namespace AppTienda
         private System.Windows.Forms.Label lbElectroTipo;
         private System.Windows.Forms.Label lbElectroSerial;
         private System.Windows.Forms.DataGridView dgConsulta;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipoElectrodomestico;
         private System.Windows.Forms.Button btnTiendaGuardar;
         private System.Windows.Forms.Button btnElectroGuardar;
         private System.Windows.Forms.Button btnConsultar;
