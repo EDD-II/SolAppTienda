@@ -45,7 +45,12 @@ namespace AppTienda
             tien.TienNombre = txtTiendaNombre.Text;
             tien.TienFechaCreacion = DateTime.Parse(txtTiendaFechaCreacion.Text);
             r=tien.insertarTienda();
-
+            if (r > 0)
+            {
+                MessageBox.Show("Tienda registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Tienda no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
