@@ -39,6 +39,10 @@ namespace AppTienda
 
         private void btnTiendaGuardar_Click(object sender, EventArgs e)
         {
+            int tienNIT = int.Parse(txtTiendaNit.Text);
+            string tieNombre = txtTiendaNombre.Text;
+            string tieFechaCreacion = txtTiendaFechaCreacion.Text;
+
 
         }
     }
