@@ -53,14 +53,12 @@ namespace AppTienda
                 MessageBox.Show("Tienda no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtTiendaNombre_TextChanged(object sender, EventArgs e)
-        {
-
+            DataSet ds = new DataSet();
+            ds = elec.consultarElectrodomestico(int.Parse(txtElectroTiendNit.Text));
+            dgConsulta.DataSource = ds;
+            dgConsulta.DataMember = "ResultadoDatos";
         }
     }
 }
