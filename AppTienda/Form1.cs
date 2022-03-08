@@ -43,7 +43,7 @@ namespace AppTienda
             int r;
             tien.TienNit = int.Parse(txtTiendaNit.Text);
             tien.TienNombre = txtTiendaNombre.Text;
-            tien.TienFechaCreacion = DateTime.Parse(txtTiendaFechaCreacion.Text);
+            tien.TienFechaCreacion = txtTiendaFechaCreacion.Text;
             r=tien.insertarTienda();
             if (r > 0)
             {

@@ -263,9 +263,9 @@ namespace AppTienda
             this.lbElectroFechaFabricacion.AutoSize = true;
             this.lbElectroFechaFabricacion.Location = new System.Drawing.Point(42, 109);
             this.lbElectroFechaFabricacion.Name = "lbElectroFechaFabricacion";
-            this.lbElectroFechaFabricacion.Size = new System.Drawing.Size(110, 13);
+            this.lbElectroFechaFabricacion.Size = new System.Drawing.Size(99, 13);
             this.lbElectroFechaFabricacion.TabIndex = 2;
-            this.lbElectroFechaFabricacion.Text = "Fecha de Fabricación";
+            this.lbElectroFechaFabricacion.Text = "Año de Fabricación";
             // 
             // lbElectroTipo
             // 

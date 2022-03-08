@@ -41,8 +41,8 @@ namespace AppTienda.logica
         public int insertarElectrodomestico()
         {
             int resultado;
-            string consulta = "insert into Electrodomestico(elecSerial,tienNit,elecTipo,elecAnioFabricacion,electPaisOrigen) value("+
-                elecSerial+","+tienNit+",'"+elecAnioFabricacion+"','"+elecMarca+"','"+elecPaisOrigen+"'";
+            string consulta = "insert into Electrodomestico(elecSerial,tienNit,elecTipo,elecAnioFabricacion,elecMarca,elecPaisOrigen) values("+
+                elecSerial+","+tienNit+",'"+elecTipo+"','"+elecAnioFabricacion+"','"+elecMarca+"','"+elecPaisOrigen+"')";
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }
