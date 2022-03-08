@@ -14,6 +14,7 @@ namespace AppTienda
     public partial class Form1 : Form
     {
         Electrodomestico elec = new Electrodomestico();
+        Tienda tien = new Tienda();
         public Form1()
         {
             InitializeComponent();
@@ -32,10 +33,11 @@ namespace AppTienda
 
         private void btnTiendaGuardar_Click(object sender, EventArgs e)
         {
-            int tienNIT = int.Parse(txtTiendaNit.Text);
-            string tieNombre = txtTiendaNombre.Text;
-            string tieFechaCreacion = txtTiendaFechaCreacion.Text;
-
+            int r;
+            tien.TienNit = int.Parse(txtTiendaNit.Text);
+            tien.TienNombre = txtTiendaNombre.Text;
+            tien.TienFechaCreacion = DateTime.Parse(txtTiendaFechaCreacion.Text);
+            r=tien.insertarTienda();
 
         }
     }
