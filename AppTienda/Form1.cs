@@ -22,35 +22,77 @@ namespace AppTienda
 
         private void btnElectroGuardar_Click(object sender, EventArgs e)
         {
-            int r;
-            elec.ElecSerial = int.Parse(txtElectroSerial.Text);
-            elec.TienNit = int.Parse(txtElectroTiendNit.Text);
-            elec.ElectTipo = cmbTipoElectrodomestico.SelectedItem.ToString();
-            elec.ElectAnioFabricacion = txtElectroFechaFabricacion.Text;
-            elec.ElectMarca = txtElectroMarca.Text;
-            elec.ElectPaisOrigen = txtElectroPaisOrigen.Text;
-            r = elec.insertarElectrodomestico();
-            if (r>0)
+            switch (validarDatosElectro())
             {
-                MessageBox.Show("Electrodomestico registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }else
-                MessageBox.Show("Electrodomestico no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                case 1:
+                    {
+                        MessageBox.Show("Debe llenar todos los campos requeridos para el registro", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                case 2:
+                    {
+                        MessageBox.Show("Datos ingresados erroneos, por favor verifique", "Datos Erroneos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                default:
+                    {
+                        int r;
+                        elec.ElecSerial = int.Parse(txtElectroSerial.Text);
+                        elec.TienNit = int.Parse(txtElectroTiendNit.Text);
+                        elec.ElectTipo = cmbTipoElectrodomestico.SelectedItem.ToString();
+                        elec.ElectAnioFabricacion = txtElectroAnioFabricacion.Text;
+                        elec.ElectMarca = txtElectroMarca.Text;
+                        elec.ElectPaisOrigen = txtElectroPaisOrigen.Text;
+                        r = elec.insertarElectrodomestico();
+                        if (r>0)
+                        {
+                            MessageBox.Show("Electrodomestico registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtElectroSerial.Clear();
+                            cmbTipoElectrodomestico.ResetText();
+                            txtElectroMarca.Clear();
+                            txtElectroPaisOrigen.Clear();
+                            txtElectroAnioFabricacion.Clear();
+                            txtElectroTiendNit.Clear();
+                        }else
+                            MessageBox.Show("Electrodomestico no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    break;
+            }
 
         }
 
         private void btnTiendaGuardar_Click(object sender, EventArgs e)
         {
-            int r;
-            tien.TienNit = int.Parse(txtTiendaNit.Text);
-            tien.TienNombre = txtTiendaNombre.Text;
-            tien.TienFechaCreacion = txtTiendaFechaCreacion.Text;
-            r=tien.insertarTienda();
-            if (r > 0)
+            switch (validarDatosTienda())
             {
-                MessageBox.Show("Tienda registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                case 1:
+                    {
+                        MessageBox.Show("Debe llenar todos los campos requeridos para el registro", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                case 2:
+                    {
+                        MessageBox.Show("Datos ingresados erroneos, por favor verifique", "Datos Erroneos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                default:
+                    {
+                        int r;
+                        tien.TienNit = int.Parse(txtTiendaNit.Text);
+                        tien.TienNombre = txtTiendaNombre.Text;
+                        tien.TienFechaCreacion = txtTiendaFechaCreacion.Text;
+                        r=tien.insertarTienda();
+                        if (r > 0)
+                        {
+                            MessageBox.Show("Tienda registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtTiendaNit.Clear();
+                            txtTiendaNombre.Clear();
+                            txtTiendaFechaCreacion.Clear();
+                        }
+                        else
+                            MessageBox.Show("Tienda no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);                    }
+                    break;
             }
-            else
-                MessageBox.Show("Tienda no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -66,6 +108,41 @@ namespace AppTienda
             {
                 MessageBox.Show("El electrodoméstico no se encuentra registrado", "Mensaje", MessageBoxButtons.OK);
             }
+        }
+
+        int validarDatosTienda()
+        {
+            if (txtTiendaNit.Text.Trim() == "" || txtTiendaNombre.Text.Trim() == "" || txtTiendaFechaCreacion.Text.Trim() == "")
+            {
+                return 1;
+            }
+            if (!(txtTiendaNit.Text.All(char.IsDigit)) || !(txtTiendaNombre.Text.All(char.IsLetter)))
+            {
+                return 2;
+            }
+            //if (atrGestor.esValido(textRegistroCivil.Text, atrTabla))//pregunta si esta repetido
+            //{
+            //    return 3;
+            //}
+            //btnTiendaGuardar.Enabled = true;
+            return 0;
+        }
+        int validarDatosElectro()
+        {
+            if (txtElectroSerial.Text.Trim() == "" || cmbTipoElectrodomestico.Text == string.Empty || txtElectroAnioFabricacion.Text.Trim() == "" || txtElectroMarca.Text.Trim() == "" || txtElectroPaisOrigen.Text.Trim() == "" || txtElectroTiendNit.Text.Trim() == "")
+            {
+                return 1;
+            }
+            if (!(txtElectroSerial.Text.All(char.IsDigit)) || !(txtElectroAnioFabricacion.Text.All(char.IsDigit)) || !(txtElectroMarca.Text.All(char.IsLetter)) || !(txtElectroPaisOrigen.Text.All(char.IsLetter)) || !(txtElectroTiendNit.Text.All(char.IsDigit)))
+            {
+                return 2;
+            }
+            //if (atrGestor.esValido(textRegistroCivil.Text, atrTabla))//pregunta si esta repetido
+            //{
+            //    return 3;
+            //}
+            //btnElectroGuardar.Enabled = true;
+            return 0;
         }
     }
 }

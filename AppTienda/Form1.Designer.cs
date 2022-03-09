@@ -45,7 +45,7 @@ namespace AppTienda
             this.txtElectroTiendNit = new System.Windows.Forms.TextBox();
             this.txtElectroPaisOrigen = new System.Windows.Forms.TextBox();
             this.txtElectroMarca = new System.Windows.Forms.TextBox();
-            this.txtElectroFechaFabricacion = new System.Windows.Forms.TextBox();
+            this.txtElectroAnioFabricacion = new System.Windows.Forms.TextBox();
             this.txtElectroSerial = new System.Windows.Forms.TextBox();
             this.lbElectroNitTienda = new System.Windows.Forms.Label();
             this.lbelectroPaisOrigen = new System.Windows.Forms.Label();
@@ -158,7 +158,7 @@ namespace AppTienda
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroTiendNit);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroPaisOrigen);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroMarca);
-            this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroFechaFabricacion);
+            this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroAnioFabricacion);
             this.tbpinsertarElectrodomestico.Controls.Add(this.txtElectroSerial);
             this.tbpinsertarElectrodomestico.Controls.Add(this.lbElectroNitTienda);
             this.tbpinsertarElectrodomestico.Controls.Add(this.lbelectroPaisOrigen);
@@ -186,6 +186,8 @@ namespace AppTienda
             // 
             // cmbTipoElectrodomestico
             // 
+            this.cmbTipoElectrodomestico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoElectrodomestico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipoElectrodomestico.FormattingEnabled = true;
             this.cmbTipoElectrodomestico.Items.AddRange(new object[] {
             "televisor",
@@ -217,12 +219,12 @@ namespace AppTienda
             this.txtElectroMarca.Size = new System.Drawing.Size(121, 20);
             this.txtElectroMarca.TabIndex = 9;
             // 
-            // txtElectroFechaFabricacion
+            // txtElectroAnioFabricacion
             // 
-            this.txtElectroFechaFabricacion.Location = new System.Drawing.Point(202, 106);
-            this.txtElectroFechaFabricacion.Name = "txtElectroFechaFabricacion";
-            this.txtElectroFechaFabricacion.Size = new System.Drawing.Size(121, 20);
-            this.txtElectroFechaFabricacion.TabIndex = 8;
+            this.txtElectroAnioFabricacion.Location = new System.Drawing.Point(202, 106);
+            this.txtElectroAnioFabricacion.Name = "txtElectroAnioFabricacion";
+            this.txtElectroAnioFabricacion.Size = new System.Drawing.Size(121, 20);
+            this.txtElectroAnioFabricacion.TabIndex = 8;
             // 
             // txtElectroSerial
             // 
@@ -236,9 +238,9 @@ namespace AppTienda
             this.lbElectroNitTienda.AutoSize = true;
             this.lbElectroNitTienda.Location = new System.Drawing.Point(42, 220);
             this.lbElectroNitTienda.Name = "lbElectroNitTienda";
-            this.lbElectroNitTienda.Size = new System.Drawing.Size(132, 13);
+            this.lbElectroNitTienda.Size = new System.Drawing.Size(159, 13);
             this.lbElectroNitTienda.TabIndex = 5;
-            this.lbElectroNitTienda.Text = "Tienda a la que pertenece";
+            this.lbElectroNitTienda.Text = "Tienda a la que pertenece (NIT)";
             // 
             // lbelectroPaisOrigen
             // 
@@ -337,9 +339,12 @@ namespace AppTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbcGestion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Tienda de Electrodomésticos";
             this.tbcGestion.ResumeLayout(false);
@@ -369,7 +374,7 @@ namespace AppTienda
         private System.Windows.Forms.TextBox txtElectroTiendNit;
         private System.Windows.Forms.TextBox txtElectroPaisOrigen;
         private System.Windows.Forms.TextBox txtElectroMarca;
-        private System.Windows.Forms.TextBox txtElectroFechaFabricacion;
+        private System.Windows.Forms.TextBox txtElectroAnioFabricacion;
         private System.Windows.Forms.TextBox txtElectroSerial;
         private System.Windows.Forms.Label lbElectroNitTienda;
         private System.Windows.Forms.Label lbelectroPaisOrigen;
