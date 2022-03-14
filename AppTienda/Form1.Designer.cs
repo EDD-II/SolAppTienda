@@ -416,6 +416,7 @@ namespace AppTienda
             // 
             // txtActFechaTienda
             // 
+            this.txtActFechaTienda.Enabled = false;
             this.txtActFechaTienda.Location = new System.Drawing.Point(305, 227);
             this.txtActFechaTienda.Name = "txtActFechaTienda";
             this.txtActFechaTienda.Size = new System.Drawing.Size(100, 20);
@@ -423,6 +424,7 @@ namespace AppTienda
             // 
             // txtActNombreTienda
             // 
+            this.txtActNombreTienda.Enabled = false;
             this.txtActNombreTienda.Location = new System.Drawing.Point(305, 161);
             this.txtActNombreTienda.Name = "txtActNombreTienda";
             this.txtActNombreTienda.Size = new System.Drawing.Size(100, 20);

@@ -151,8 +151,11 @@ namespace AppTienda
             if(miDS.Tables[0].Rows.Count > 0)
             {
                 btnActualizarTienda.Enabled = true;
-                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
-                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                txtActNombreTienda.Enabled = true;
+                txtActFechaTienda.Enabled = true;
+                tien.TienNit = int.Parse(txtActNitTienda.Text);
+                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[0].ToString();
+                txtActFechaTienda.Text = Convert.ToDateTime(miDS.Tables[0].Rows[0].ItemArray[1].ToString()).ToShortDateString();
             }
             else
             {
@@ -162,12 +165,16 @@ namespace AppTienda
 
         private void btnActualizarTienda_Click(object sender, EventArgs e)
         {
-            tien.TienNombre = txtActNombreTienda.Text;
+            tien.TienNombre = txtActNombreTienda.Text.ToUpper();
             tien.TienFechaCreacion = txtActFechaTienda.Text;
             if (tien.actualizarTienda() > 0)
             {
                 MessageBox.Show("La Tienda se ha actualizado", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnActualizarTienda.Enabled = false;
+                txtActNombreTienda.Enabled = false;
+                txtActNombreTienda.Clear();
+                txtActFechaTienda.Enabled = false;
+                txtActFechaTienda.Clear();
             }
             else
             {
