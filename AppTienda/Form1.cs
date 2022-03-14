@@ -151,9 +151,8 @@ namespace AppTienda
             if(miDS.Tables[0].Rows.Count > 0)
             {
                 btnActualizarTienda.Enabled = true;
-                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
-                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[3].ToString();
-                tien = new Tienda(int.Parse(txtActNitTienda.Text), txtActNombreTienda.Text, txtActFechaTienda.Text);
+                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
+                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
             }
             else
             {
@@ -163,6 +162,8 @@ namespace AppTienda
 
         private void btnActualizarTienda_Click(object sender, EventArgs e)
         {
+            tien.TienNombre = txtActNombreTienda.Text;
+            tien.TienFechaCreacion = txtActFechaTienda.Text;
             if (tien.actualizarTienda() > 0)
             {
                 MessageBox.Show("La Tienda se ha actualizado", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
