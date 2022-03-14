@@ -42,7 +42,7 @@ namespace AppTienda.logica
         {
             DataSet miDS = new DataSet();
             string consulta;
-            consulta = "select tienNit Nit,tienNit Nit,tienNombre Nombre ,tienFechaCreacion Fecha " + "" +
+            consulta = "select tienNit Nit,tienNombre Nombre ,tienFechaCreacion Fecha " + "" +
                       "from Tienda " +
                       "where tienNit = " + prmtinNit;
 
