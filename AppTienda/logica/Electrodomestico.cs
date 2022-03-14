@@ -61,7 +61,7 @@ namespace AppTienda.logica
         {
             DataSet miDS = new DataSet();
             string consulta;
-            consulta = "select elecSerial serial,tienNit Nit,elecTipo Tipo ,elecAnioFabricacion año,elecMarca marca,elecPaisOrigen pais " + "" +
+            consulta = "select tienNit Nit,elecTipo Tipo ,elecAnioFabricacion año,elecMarca marca,elecPaisOrigen pais " + "" +
                       "from Electrodomestico " +
                       "where elecSerial = " + prmelecSerial;
 
