@@ -57,5 +57,25 @@ namespace AppTienda.logica
             miDS = dt.ejecutarSELECT(consulta);
             return miDS; 
         }
+        public DataSet retornarElectrodomestico(int prmelecSerial)
+        {
+            DataSet miDS = new DataSet();
+            string consulta;
+            consulta = "select elecSerial serial,tienNit Nit,elecTipo Tipo ,elecAnioFabricacion año,elecMarca marca,elecPaisOrigen pais " + "" +
+                      "from Electrodomestico " +
+                      "where elecSerial = " + prmelecSerial;
+
+            miDS = dt.ejecutarSELECT(consulta);
+            return miDS; 
+        }
+        public int actualizarElectrodomestico()
+        {
+            int resultado;
+            string consulta = "update Electrodomestico set tienNit = " + tienNit + ",elecTipo = '" + elecTipo + "',elecAnioFabricacion = '" +
+                                elecAnioFabricacion + "',elecMarca = '" + elecMarca + "',elecPaisOrigen = '" + elecPaisOrigen +"' "+ 
+                                "where elecSerial =" + elecSerial;
+            resultado = dt.ejecutarDML(consulta);
+            return resultado;
+        }
     }
 }
