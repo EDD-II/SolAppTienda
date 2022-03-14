@@ -41,8 +41,8 @@ namespace AppTienda
                         elec.TienNit = int.Parse(txtElectroTiendNit.Text);
                         elec.ElectTipo = cmbTipoElectrodomestico.SelectedItem.ToString();
                         elec.ElectAnioFabricacion = txtElectroAnioFabricacion.Text;
-                        elec.ElectMarca = txtElectroMarca.Text;
-                        elec.ElectPaisOrigen = txtElectroPaisOrigen.Text;
+                        elec.ElectMarca = txtElectroMarca.Text.ToLowerInvariant();
+                        elec.ElectPaisOrigen = txtElectroPaisOrigen.Text.ToLowerInvariant();
                         r = elec.insertarElectrodomestico();
                         if (r>0)
                         {
@@ -79,7 +79,7 @@ namespace AppTienda
                     {
                         int r;
                         tien.TienNit = int.Parse(txtTiendaNit.Text);
-                        tien.TienNombre = txtTiendaNombre.Text;
+                        tien.TienNombre = txtTiendaNombre.Text.ToLowerInvariant();
                         tien.TienFechaCreacion = txtTiendaFechaCreacion.Text;
                         r=tien.insertarTienda();
                         if (r > 0)
@@ -98,7 +98,7 @@ namespace AppTienda
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds = elec.consultarElectrodomestico(int.Parse(txtElectroTiendNit.Text));
+            ds = elec.consultarElectrodomestico(int.Parse(txtConsultaNit.Text));
             if(ds.Tables[0].Rows.Count > 0)
             {
                 dgConsulta.DataSource = ds;
@@ -106,7 +106,7 @@ namespace AppTienda
             }
             else
             {
-                MessageBox.Show("El electrodoméstico no se encuentra registrado", "Mensaje", MessageBoxButtons.OK);
+                MessageBox.Show("La Tienda especificada no tiene electrodomesticos registrado o no existe", "Mensaje", MessageBoxButtons.OK);
             }
         }
 
@@ -116,7 +116,7 @@ namespace AppTienda
             {
                 return 1;
             }
-            if (!(txtTiendaNit.Text.All(char.IsDigit)) || !(txtTiendaNombre.Text.All(char.IsLetter)))
+            if (!(txtTiendaNit.Text.All(char.IsDigit)))
             {
                 return 2;
             }
@@ -143,6 +143,21 @@ namespace AppTienda
             //}
             //btnElectroGuardar.Enabled = true;
             return 0;
+        }
+
+        private void btnBuscarTienda_Click(object sender, EventArgs e)
+        {
+            DataSet miDS = retornarTienda(int.Parse(txtActNitTienda.Text));
+            if(miDS.Tables[0].Rows.Count > 0)
+            {
+                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
+                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                tien = new Tienda(int.Parse(txtActNitTienda.Text), txtActNombreTienda.Text, txtActFechaTienda.Text);
+            }
+            else
+            {
+                MessageBox.Show("No hay inguna tienda registrada con este NIT", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

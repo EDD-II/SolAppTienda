@@ -33,7 +33,7 @@ namespace AppTienda.logica
         {
             int resultado;
             string consulta = "insert into Tienda(tienNit,tienNombre,tienFechaCreacion) values("+
-                                tienNit+",'"+tienNombre+ "',to_date('" + tienFechaCreacion+ "','dd/mm/yyyy'))";
+                                tienNit+",'"+tienNombre+ "','" + tienFechaCreacion+ "')";
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }

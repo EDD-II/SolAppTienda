@@ -58,11 +58,22 @@ namespace AppTienda
             this.txtConsultaNit = new System.Windows.Forms.TextBox();
             this.lbConsultaNit = new System.Windows.Forms.Label();
             this.dgConsulta = new System.Windows.Forms.DataGridView();
+            this.tbpActializarDatosTienda = new System.Windows.Forms.TabPage();
+            this.btnActualizarTienda = new System.Windows.Forms.Button();
+            this.btnBuscarTienda = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtActFechaTienda = new System.Windows.Forms.TextBox();
+            this.txtActNombreTienda = new System.Windows.Forms.TextBox();
+            this.txtActNitTienda = new System.Windows.Forms.TextBox();
+            this.tbcActualizarElectrodomestico = new System.Windows.Forms.TabPage();
             this.tbcGestion.SuspendLayout();
             this.tbpinsertarTienda.SuspendLayout();
             this.tbpinsertarElectrodomestico.SuspendLayout();
             this.tbpconsultarElectrodomesticos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).BeginInit();
+            this.tbpActializarDatosTienda.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcGestion
@@ -70,6 +81,8 @@ namespace AppTienda
             this.tbcGestion.Controls.Add(this.tbpinsertarTienda);
             this.tbcGestion.Controls.Add(this.tbpinsertarElectrodomestico);
             this.tbcGestion.Controls.Add(this.tbpconsultarElectrodomesticos);
+            this.tbcGestion.Controls.Add(this.tbpActializarDatosTienda);
+            this.tbcGestion.Controls.Add(this.tbcActualizarElectrodomestico);
             this.tbcGestion.Location = new System.Drawing.Point(36, 92);
             this.tbcGestion.Name = "tbcGestion";
             this.tbcGestion.SelectedIndex = 0;
@@ -335,6 +348,101 @@ namespace AppTienda
             this.dgConsulta.Size = new System.Drawing.Size(664, 208);
             this.dgConsulta.TabIndex = 0;
             // 
+            // tbpActializarDatosTienda
+            // 
+            this.tbpActializarDatosTienda.Controls.Add(this.btnActualizarTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.btnBuscarTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.label3);
+            this.tbpActializarDatosTienda.Controls.Add(this.label2);
+            this.tbpActializarDatosTienda.Controls.Add(this.label1);
+            this.tbpActializarDatosTienda.Controls.Add(this.txtActFechaTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.txtActNombreTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.txtActNitTienda);
+            this.tbpActializarDatosTienda.Location = new System.Drawing.Point(4, 22);
+            this.tbpActializarDatosTienda.Name = "tbpActializarDatosTienda";
+            this.tbpActializarDatosTienda.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpActializarDatosTienda.Size = new System.Drawing.Size(722, 320);
+            this.tbpActializarDatosTienda.TabIndex = 3;
+            this.tbpActializarDatosTienda.Text = "Actualizar Tienda";
+            this.tbpActializarDatosTienda.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizarTienda
+            // 
+            this.btnActualizarTienda.Location = new System.Drawing.Point(319, 273);
+            this.btnActualizarTienda.Name = "btnActualizarTienda";
+            this.btnActualizarTienda.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizarTienda.TabIndex = 7;
+            this.btnActualizarTienda.Text = "Actualizar";
+            this.btnActualizarTienda.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarTienda
+            // 
+            this.btnBuscarTienda.Location = new System.Drawing.Point(319, 92);
+            this.btnBuscarTienda.Name = "btnBuscarTienda";
+            this.btnBuscarTienda.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarTienda.TabIndex = 6;
+            this.btnBuscarTienda.Text = "Buscar";
+            this.btnBuscarTienda.UseVisualStyleBackColor = true;
+            this.btnBuscarTienda.Click += new System.EventHandler(this.btnBuscarTienda_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(191, 230);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Fecha de Creación";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(191, 164);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(191, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "NIT";
+            // 
+            // txtActFechaTienda
+            // 
+            this.txtActFechaTienda.Location = new System.Drawing.Point(305, 227);
+            this.txtActFechaTienda.Name = "txtActFechaTienda";
+            this.txtActFechaTienda.Size = new System.Drawing.Size(100, 20);
+            this.txtActFechaTienda.TabIndex = 2;
+            // 
+            // txtActNombreTienda
+            // 
+            this.txtActNombreTienda.Location = new System.Drawing.Point(305, 161);
+            this.txtActNombreTienda.Name = "txtActNombreTienda";
+            this.txtActNombreTienda.Size = new System.Drawing.Size(100, 20);
+            this.txtActNombreTienda.TabIndex = 1;
+            // 
+            // txtActNitTienda
+            // 
+            this.txtActNitTienda.Location = new System.Drawing.Point(305, 36);
+            this.txtActNitTienda.Name = "txtActNitTienda";
+            this.txtActNitTienda.Size = new System.Drawing.Size(100, 20);
+            this.txtActNitTienda.TabIndex = 0;
+            // 
+            // tbcActualizarElectrodomestico
+            // 
+            this.tbcActualizarElectrodomestico.Location = new System.Drawing.Point(4, 22);
+            this.tbcActualizarElectrodomestico.Name = "tbcActualizarElectrodomestico";
+            this.tbcActualizarElectrodomestico.Padding = new System.Windows.Forms.Padding(3);
+            this.tbcActualizarElectrodomestico.Size = new System.Drawing.Size(722, 320);
+            this.tbcActualizarElectrodomestico.TabIndex = 4;
+            this.tbcActualizarElectrodomestico.Text = "Actualizar Electrodoméstico";
+            this.tbcActualizarElectrodomestico.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,6 +463,8 @@ namespace AppTienda
             this.tbpconsultarElectrodomesticos.ResumeLayout(false);
             this.tbpconsultarElectrodomesticos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).EndInit();
+            this.tbpActializarDatosTienda.ResumeLayout(false);
+            this.tbpActializarDatosTienda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -389,6 +499,16 @@ namespace AppTienda
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtConsultaNit;
         private System.Windows.Forms.Label lbConsultaNit;
+        private System.Windows.Forms.TabPage tbpActializarDatosTienda;
+        private System.Windows.Forms.Button btnActualizarTienda;
+        private System.Windows.Forms.Button btnBuscarTienda;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtActFechaTienda;
+        private System.Windows.Forms.TextBox txtActNombreTienda;
+        private System.Windows.Forms.TextBox txtActNitTienda;
+        private System.Windows.Forms.TabPage tbcActualizarElectrodomestico;
     }
 }
 
