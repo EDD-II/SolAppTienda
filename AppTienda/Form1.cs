@@ -41,14 +41,13 @@ namespace AppTienda
                         elec.TienNit = int.Parse(txtElectroTiendNit.Text);
                         elec.ElectTipo = cmbTipoElectrodomestico.SelectedItem.ToString();
                         elec.ElectAnioFabricacion = txtElectroAnioFabricacion.Text;
-                        elec.ElectMarca = txtElectroMarca.Text.ToLowerInvariant();
-                        elec.ElectPaisOrigen = txtElectroPaisOrigen.Text.ToLowerInvariant();
+                        elec.ElectMarca = txtElectroMarca.Text.ToUpper();
+                        elec.ElectPaisOrigen = txtElectroPaisOrigen.Text.ToUpper();
                         r = elec.insertarElectrodomestico();
                         if (r>0)
                         {
                             MessageBox.Show("Electrodomestico registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtElectroSerial.Clear();
-                            cmbTipoElectrodomestico.ResetText();
                             txtElectroMarca.Clear();
                             txtElectroPaisOrigen.Clear();
                             txtElectroAnioFabricacion.Clear();
@@ -79,7 +78,7 @@ namespace AppTienda
                     {
                         int r;
                         tien.TienNit = int.Parse(txtTiendaNit.Text);
-                        tien.TienNombre = txtTiendaNombre.Text.ToLowerInvariant();
+                        tien.TienNombre = txtTiendaNombre.Text.ToUpper();
                         tien.TienFechaCreacion = txtTiendaFechaCreacion.Text;
                         r=tien.insertarTienda();
                         if (r > 0)
@@ -194,12 +193,11 @@ namespace AppTienda
                 txtActPaisElectro.Enabled = true;
                 txtActTiendaElectro.Enabled = true;
                 elec.ElecSerial = int.Parse(txtActSerialElectro.Text);
-                txtActAnioElectro.Text = miDS.Tables[0].Rows[0].ItemArray[0].ToString();
-                cmbActTipoElectro.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
-                txtActMarcaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
-                txtActPaisElectro.Text = miDS.Tables[0].Rows[0].ItemArray[3].ToString();
+                txtActTiendaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[0].ToString();
+                cmbActTipoElectro.SelectedItem = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
+                txtActAnioElectro.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                txtActMarcaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[3].ToString();
                 txtActPaisElectro.Text = miDS.Tables[0].Rows[0].ItemArray[4].ToString();
-                txtActTiendaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[5].ToString();
             }
             else
             {
@@ -209,7 +207,7 @@ namespace AppTienda
 
         private void btnActualizarElectro_Click(object sender, EventArgs e)
         {
-            elec.ElectTipo = cmbActTipoElectro.Text.ToUpper();
+            elec.ElectTipo = cmbActTipoElectro.SelectedItem.ToString();
             elec.ElectAnioFabricacion = txtActAnioElectro.Text;
             elec.ElectMarca = txtActMarcaElectro.Text.ToUpper();
             elec.ElectPaisOrigen = txtActPaisElectro.Text.ToUpper();
@@ -221,7 +219,6 @@ namespace AppTienda
                 txtActAnioElectro.Enabled = false;
                 txtActAnioElectro.Clear();
                 cmbActTipoElectro.Enabled = false;
-                cmbActTipoElectro.ResetText();
                 txtActMarcaElectro.Enabled = false;
                 txtActMarcaElectro.Clear();
                 txtActPaisElectro.Enabled = false;
