@@ -181,5 +181,58 @@ namespace AppTienda
                 MessageBox.Show("La Tienda no se ha podido actualizar", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnBuscarElectro_Click(object sender, EventArgs e)
+        {
+            DataSet miDS = elec.retornarElectrodomestico(int.Parse(txtActSerialElectro.Text));
+            if (miDS.Tables[0].Rows.Count > 0)
+            {
+                btnActualizarElectro.Enabled = true;
+                txtActAnioElectro.Enabled = true;
+                cmbActTipoElectro.Enabled = true;
+                txtActMarcaElectro.Enabled = true;
+                txtActPaisElectro.Enabled = true;
+                txtActTiendaElectro.Enabled = true;
+                elec.ElecSerial = int.Parse(txtActSerialElectro.Text);
+                txtActAnioElectro.Text = miDS.Tables[0].Rows[0].ItemArray[0].ToString();
+                cmbActTipoElectro.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
+                txtActMarcaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                txtActPaisElectro.Text = miDS.Tables[0].Rows[0].ItemArray[3].ToString();
+                txtActPaisElectro.Text = miDS.Tables[0].Rows[0].ItemArray[4].ToString();
+                txtActTiendaElectro.Text = miDS.Tables[0].Rows[0].ItemArray[5].ToString();
+            }
+            else
+            {
+                MessageBox.Show("No hay ningún Electrodoméstico con este Serial", "Actualizar Electrodoméstico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnActualizarElectro_Click(object sender, EventArgs e)
+        {
+            elec.ElectTipo = cmbActTipoElectro.Text.ToUpper();
+            elec.ElectAnioFabricacion = txtActAnioElectro.Text;
+            elec.ElectMarca = txtActMarcaElectro.Text.ToUpper();
+            elec.ElectPaisOrigen = txtActPaisElectro.Text.ToUpper();
+            elec.TienNit = int.Parse(txtActTiendaElectro.Text);
+            if (elec.actualizarElectrodomestico() > 0)
+            {
+                MessageBox.Show("El electrodoméstico se ha actualizado", "Actualizar Electrodoméstico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnActualizarElectro.Enabled = false;
+                txtActAnioElectro.Enabled = false;
+                txtActAnioElectro.Clear();
+                cmbActTipoElectro.Enabled = false;
+                cmbActTipoElectro.ResetText();
+                txtActMarcaElectro.Enabled = false;
+                txtActMarcaElectro.Clear();
+                txtActPaisElectro.Enabled = false;
+                txtActPaisElectro.Clear();
+                txtActTiendaElectro.Enabled = false;
+                txtActTiendaElectro.Clear();
+            }
+            else
+            {
+                MessageBox.Show("El electrodoméstico no se ha podido actualizar", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

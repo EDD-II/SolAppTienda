@@ -61,19 +61,34 @@ namespace AppTienda
             this.tbpActializarDatosTienda = new System.Windows.Forms.TabPage();
             this.btnActualizarTienda = new System.Windows.Forms.Button();
             this.btnBuscarTienda = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbActFechaTienda = new System.Windows.Forms.Label();
+            this.lbActNombreTienda = new System.Windows.Forms.Label();
+            this.lbActNitTienda = new System.Windows.Forms.Label();
             this.txtActFechaTienda = new System.Windows.Forms.TextBox();
             this.txtActNombreTienda = new System.Windows.Forms.TextBox();
             this.txtActNitTienda = new System.Windows.Forms.TextBox();
             this.tbcActualizarElectrodomestico = new System.Windows.Forms.TabPage();
+            this.lbActSerialElectro = new System.Windows.Forms.Label();
+            this.lbActTipoElectro = new System.Windows.Forms.Label();
+            this.lbActAnioElectro = new System.Windows.Forms.Label();
+            this.lbActMarcaElectro = new System.Windows.Forms.Label();
+            this.lbActPaisElectro = new System.Windows.Forms.Label();
+            this.lbActTiendaElectro = new System.Windows.Forms.Label();
+            this.txtActSerialElectro = new System.Windows.Forms.TextBox();
+            this.txtActAnioElectro = new System.Windows.Forms.TextBox();
+            this.txtActMarcaElectro = new System.Windows.Forms.TextBox();
+            this.txtActPaisElectro = new System.Windows.Forms.TextBox();
+            this.txtActTiendaElectro = new System.Windows.Forms.TextBox();
+            this.cmbActTipoElectro = new System.Windows.Forms.ComboBox();
+            this.btnBuscarElectro = new System.Windows.Forms.Button();
+            this.btnActualizarElectro = new System.Windows.Forms.Button();
             this.tbcGestion.SuspendLayout();
             this.tbpinsertarTienda.SuspendLayout();
             this.tbpinsertarElectrodomestico.SuspendLayout();
             this.tbpconsultarElectrodomesticos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).BeginInit();
             this.tbpActializarDatosTienda.SuspendLayout();
+            this.tbcActualizarElectrodomestico.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcGestion
@@ -352,9 +367,9 @@ namespace AppTienda
             // 
             this.tbpActializarDatosTienda.Controls.Add(this.btnActualizarTienda);
             this.tbpActializarDatosTienda.Controls.Add(this.btnBuscarTienda);
-            this.tbpActializarDatosTienda.Controls.Add(this.label3);
-            this.tbpActializarDatosTienda.Controls.Add(this.label2);
-            this.tbpActializarDatosTienda.Controls.Add(this.label1);
+            this.tbpActializarDatosTienda.Controls.Add(this.lbActFechaTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.lbActNombreTienda);
+            this.tbpActializarDatosTienda.Controls.Add(this.lbActNitTienda);
             this.tbpActializarDatosTienda.Controls.Add(this.txtActFechaTienda);
             this.tbpActializarDatosTienda.Controls.Add(this.txtActNombreTienda);
             this.tbpActializarDatosTienda.Controls.Add(this.txtActNitTienda);
@@ -387,32 +402,32 @@ namespace AppTienda
             this.btnBuscarTienda.UseVisualStyleBackColor = true;
             this.btnBuscarTienda.Click += new System.EventHandler(this.btnBuscarTienda_Click);
             // 
-            // label3
+            // lbActFechaTienda
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 230);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Fecha de Creación";
+            this.lbActFechaTienda.AutoSize = true;
+            this.lbActFechaTienda.Location = new System.Drawing.Point(191, 230);
+            this.lbActFechaTienda.Name = "lbActFechaTienda";
+            this.lbActFechaTienda.Size = new System.Drawing.Size(97, 13);
+            this.lbActFechaTienda.TabIndex = 5;
+            this.lbActFechaTienda.Text = "Fecha de Creación";
             // 
-            // label2
+            // lbActNombreTienda
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre";
+            this.lbActNombreTienda.AutoSize = true;
+            this.lbActNombreTienda.Location = new System.Drawing.Point(191, 164);
+            this.lbActNombreTienda.Name = "lbActNombreTienda";
+            this.lbActNombreTienda.Size = new System.Drawing.Size(44, 13);
+            this.lbActNombreTienda.TabIndex = 4;
+            this.lbActNombreTienda.Text = "Nombre";
             // 
-            // label1
+            // lbActNitTienda
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(191, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "NIT";
+            this.lbActNitTienda.AutoSize = true;
+            this.lbActNitTienda.Location = new System.Drawing.Point(191, 39);
+            this.lbActNitTienda.Name = "lbActNitTienda";
+            this.lbActNitTienda.Size = new System.Drawing.Size(25, 13);
+            this.lbActNitTienda.TabIndex = 3;
+            this.lbActNitTienda.Text = "NIT";
             // 
             // txtActFechaTienda
             // 
@@ -439,6 +454,20 @@ namespace AppTienda
             // 
             // tbcActualizarElectrodomestico
             // 
+            this.tbcActualizarElectrodomestico.Controls.Add(this.btnActualizarElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.btnBuscarElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.cmbActTipoElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.txtActTiendaElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.txtActPaisElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.txtActMarcaElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.txtActAnioElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.txtActSerialElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActTiendaElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActPaisElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActMarcaElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActAnioElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActTipoElectro);
+            this.tbcActualizarElectrodomestico.Controls.Add(this.lbActSerialElectro);
             this.tbcActualizarElectrodomestico.Location = new System.Drawing.Point(4, 22);
             this.tbcActualizarElectrodomestico.Name = "tbcActualizarElectrodomestico";
             this.tbcActualizarElectrodomestico.Padding = new System.Windows.Forms.Padding(3);
@@ -446,6 +475,134 @@ namespace AppTienda
             this.tbcActualizarElectrodomestico.TabIndex = 4;
             this.tbcActualizarElectrodomestico.Text = "Actualizar Electrodoméstico";
             this.tbcActualizarElectrodomestico.UseVisualStyleBackColor = true;
+            // 
+            // lbActSerialElectro
+            // 
+            this.lbActSerialElectro.AutoSize = true;
+            this.lbActSerialElectro.Location = new System.Drawing.Point(81, 51);
+            this.lbActSerialElectro.Name = "lbActSerialElectro";
+            this.lbActSerialElectro.Size = new System.Drawing.Size(33, 13);
+            this.lbActSerialElectro.TabIndex = 0;
+            this.lbActSerialElectro.Text = "Serial";
+            // 
+            // lbActTipoElectro
+            // 
+            this.lbActTipoElectro.AutoSize = true;
+            this.lbActTipoElectro.Location = new System.Drawing.Point(383, 51);
+            this.lbActTipoElectro.Name = "lbActTipoElectro";
+            this.lbActTipoElectro.Size = new System.Drawing.Size(28, 13);
+            this.lbActTipoElectro.TabIndex = 1;
+            this.lbActTipoElectro.Text = "Tipo";
+            // 
+            // lbActAnioElectro
+            // 
+            this.lbActAnioElectro.AutoSize = true;
+            this.lbActAnioElectro.Location = new System.Drawing.Point(383, 89);
+            this.lbActAnioElectro.Name = "lbActAnioElectro";
+            this.lbActAnioElectro.Size = new System.Drawing.Size(86, 13);
+            this.lbActAnioElectro.TabIndex = 2;
+            this.lbActAnioElectro.Text = "Año de Creación";
+            // 
+            // lbActMarcaElectro
+            // 
+            this.lbActMarcaElectro.AutoSize = true;
+            this.lbActMarcaElectro.Location = new System.Drawing.Point(383, 129);
+            this.lbActMarcaElectro.Name = "lbActMarcaElectro";
+            this.lbActMarcaElectro.Size = new System.Drawing.Size(37, 13);
+            this.lbActMarcaElectro.TabIndex = 3;
+            this.lbActMarcaElectro.Text = "Marca";
+            // 
+            // lbActPaisElectro
+            // 
+            this.lbActPaisElectro.AutoSize = true;
+            this.lbActPaisElectro.Location = new System.Drawing.Point(383, 176);
+            this.lbActPaisElectro.Name = "lbActPaisElectro";
+            this.lbActPaisElectro.Size = new System.Drawing.Size(78, 13);
+            this.lbActPaisElectro.TabIndex = 4;
+            this.lbActPaisElectro.Text = "País de Origen";
+            // 
+            // lbActTiendaElectro
+            // 
+            this.lbActTiendaElectro.AutoSize = true;
+            this.lbActTiendaElectro.Location = new System.Drawing.Point(383, 219);
+            this.lbActTiendaElectro.Name = "lbActTiendaElectro";
+            this.lbActTiendaElectro.Size = new System.Drawing.Size(159, 13);
+            this.lbActTiendaElectro.TabIndex = 5;
+            this.lbActTiendaElectro.Text = "Tienda a la que pertecene (NIT)";
+            // 
+            // txtActSerialElectro
+            // 
+            this.txtActSerialElectro.Location = new System.Drawing.Point(160, 51);
+            this.txtActSerialElectro.Name = "txtActSerialElectro";
+            this.txtActSerialElectro.Size = new System.Drawing.Size(100, 20);
+            this.txtActSerialElectro.TabIndex = 6;
+            // 
+            // txtActAnioElectro
+            // 
+            this.txtActAnioElectro.Enabled = false;
+            this.txtActAnioElectro.Location = new System.Drawing.Point(556, 86);
+            this.txtActAnioElectro.Name = "txtActAnioElectro";
+            this.txtActAnioElectro.Size = new System.Drawing.Size(100, 20);
+            this.txtActAnioElectro.TabIndex = 7;
+            // 
+            // txtActMarcaElectro
+            // 
+            this.txtActMarcaElectro.Enabled = false;
+            this.txtActMarcaElectro.Location = new System.Drawing.Point(556, 126);
+            this.txtActMarcaElectro.Name = "txtActMarcaElectro";
+            this.txtActMarcaElectro.Size = new System.Drawing.Size(100, 20);
+            this.txtActMarcaElectro.TabIndex = 8;
+            // 
+            // txtActPaisElectro
+            // 
+            this.txtActPaisElectro.Enabled = false;
+            this.txtActPaisElectro.Location = new System.Drawing.Point(556, 173);
+            this.txtActPaisElectro.Name = "txtActPaisElectro";
+            this.txtActPaisElectro.Size = new System.Drawing.Size(100, 20);
+            this.txtActPaisElectro.TabIndex = 9;
+            // 
+            // txtActTiendaElectro
+            // 
+            this.txtActTiendaElectro.Enabled = false;
+            this.txtActTiendaElectro.Location = new System.Drawing.Point(556, 216);
+            this.txtActTiendaElectro.Name = "txtActTiendaElectro";
+            this.txtActTiendaElectro.Size = new System.Drawing.Size(100, 20);
+            this.txtActTiendaElectro.TabIndex = 10;
+            // 
+            // cmbActTipoElectro
+            // 
+            this.cmbActTipoElectro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbActTipoElectro.Enabled = false;
+            this.cmbActTipoElectro.FormattingEnabled = true;
+            this.cmbActTipoElectro.Items.AddRange(new object[] {
+            "televisor",
+            "lavadora",
+            "nevera"});
+            this.cmbActTipoElectro.Location = new System.Drawing.Point(556, 48);
+            this.cmbActTipoElectro.Name = "cmbActTipoElectro";
+            this.cmbActTipoElectro.Size = new System.Drawing.Size(100, 21);
+            this.cmbActTipoElectro.TabIndex = 11;
+            // 
+            // btnBuscarElectro
+            // 
+            this.btnBuscarElectro.Location = new System.Drawing.Point(169, 100);
+            this.btnBuscarElectro.Name = "btnBuscarElectro";
+            this.btnBuscarElectro.Size = new System.Drawing.Size(74, 31);
+            this.btnBuscarElectro.TabIndex = 12;
+            this.btnBuscarElectro.Text = "Buscar";
+            this.btnBuscarElectro.UseVisualStyleBackColor = true;
+            this.btnBuscarElectro.Click += new System.EventHandler(this.btnBuscarElectro_Click);
+            // 
+            // btnActualizarElectro
+            // 
+            this.btnActualizarElectro.Enabled = false;
+            this.btnActualizarElectro.Location = new System.Drawing.Point(490, 264);
+            this.btnActualizarElectro.Name = "btnActualizarElectro";
+            this.btnActualizarElectro.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizarElectro.TabIndex = 13;
+            this.btnActualizarElectro.Text = "Actualizar";
+            this.btnActualizarElectro.UseVisualStyleBackColor = true;
+            this.btnActualizarElectro.Click += new System.EventHandler(this.btnActualizarElectro_Click);
             // 
             // Form1
             // 
@@ -469,6 +626,8 @@ namespace AppTienda
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).EndInit();
             this.tbpActializarDatosTienda.ResumeLayout(false);
             this.tbpActializarDatosTienda.PerformLayout();
+            this.tbcActualizarElectrodomestico.ResumeLayout(false);
+            this.tbcActualizarElectrodomestico.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -506,13 +665,27 @@ namespace AppTienda
         private System.Windows.Forms.TabPage tbpActializarDatosTienda;
         private System.Windows.Forms.Button btnActualizarTienda;
         private System.Windows.Forms.Button btnBuscarTienda;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbActFechaTienda;
+        private System.Windows.Forms.Label lbActNombreTienda;
+        private System.Windows.Forms.Label lbActNitTienda;
         private System.Windows.Forms.TextBox txtActFechaTienda;
         private System.Windows.Forms.TextBox txtActNombreTienda;
         private System.Windows.Forms.TextBox txtActNitTienda;
         private System.Windows.Forms.TabPage tbcActualizarElectrodomestico;
+        private System.Windows.Forms.ComboBox cmbActTipoElectro;
+        private System.Windows.Forms.TextBox txtActTiendaElectro;
+        private System.Windows.Forms.TextBox txtActPaisElectro;
+        private System.Windows.Forms.TextBox txtActMarcaElectro;
+        private System.Windows.Forms.TextBox txtActAnioElectro;
+        private System.Windows.Forms.TextBox txtActSerialElectro;
+        private System.Windows.Forms.Label lbActTiendaElectro;
+        private System.Windows.Forms.Label lbActPaisElectro;
+        private System.Windows.Forms.Label lbActMarcaElectro;
+        private System.Windows.Forms.Label lbActAnioElectro;
+        private System.Windows.Forms.Label lbActTipoElectro;
+        private System.Windows.Forms.Label lbActSerialElectro;
+        private System.Windows.Forms.Button btnActualizarElectro;
+        private System.Windows.Forms.Button btnBuscarElectro;
     }
 }
 
