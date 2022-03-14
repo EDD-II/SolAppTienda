@@ -147,16 +147,30 @@ namespace AppTienda
 
         private void btnBuscarTienda_Click(object sender, EventArgs e)
         {
-            DataSet miDS = retornarTienda(int.Parse(txtActNitTienda.Text));
+            DataSet miDS = tien.retornarTienda(int.Parse(txtActNitTienda.Text));
             if(miDS.Tables[0].Rows.Count > 0)
             {
-                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[1].ToString();
-                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                btnActualizarTienda.Enabled = true;
+                txtActNombreTienda.Text = miDS.Tables[0].Rows[0].ItemArray[2].ToString();
+                txtActFechaTienda.Text = miDS.Tables[0].Rows[0].ItemArray[3].ToString();
                 tien = new Tienda(int.Parse(txtActNitTienda.Text), txtActNombreTienda.Text, txtActFechaTienda.Text);
             }
             else
             {
-                MessageBox.Show("No hay inguna tienda registrada con este NIT", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay niguna tienda registrada con este NIT", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnActualizarTienda_Click(object sender, EventArgs e)
+        {
+            if (tien.actualizarTienda() > 0)
+            {
+                MessageBox.Show("La Tienda se ha actualizado", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnActualizarTienda.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("La Tienda no se ha podido actualizar", "Actualizar Tienda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

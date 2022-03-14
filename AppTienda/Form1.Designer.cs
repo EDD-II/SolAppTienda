@@ -368,12 +368,14 @@ namespace AppTienda
             // 
             // btnActualizarTienda
             // 
+            this.btnActualizarTienda.Enabled = false;
             this.btnActualizarTienda.Location = new System.Drawing.Point(319, 273);
             this.btnActualizarTienda.Name = "btnActualizarTienda";
             this.btnActualizarTienda.Size = new System.Drawing.Size(75, 23);
             this.btnActualizarTienda.TabIndex = 7;
             this.btnActualizarTienda.Text = "Actualizar";
             this.btnActualizarTienda.UseVisualStyleBackColor = true;
+            this.btnActualizarTienda.Click += new System.EventHandler(this.btnActualizarTienda_Click);
             // 
             // btnBuscarTienda
             // 
