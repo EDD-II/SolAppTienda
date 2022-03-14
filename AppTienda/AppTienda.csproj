@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>aparato-electrico.ico</ApplicationIcon>
+    <ApplicationIcon>Tienda.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Oracle.DataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aparato-electrico.ico" />
+    <Content Include="Tienda.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
